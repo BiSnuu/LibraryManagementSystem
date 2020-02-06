@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bn_login" type="id" />
+    <item name="button10" type="id" />
+    <item name="button11" type="id" />
+    <item name="login_name" type="id" />
+    <item name="login_password" type="id" />
+</resources>
