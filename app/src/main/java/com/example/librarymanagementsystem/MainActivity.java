@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -66,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.login_password);
         //Click listner for login button
         login_button.setOnClickListener(new View.OnClickListener() {
+            class StringRequest {
+            }
+
             @Override
             public void onClick(View view) {
                 //Check if they entered un and pwd
@@ -108,12 +114,19 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     }, new Response.ErrorListener() {
+                        class VolleyError {
+                            public void printStackTrace() {
+                            }
+                        }
+
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Toast.makeText(MainActivity.this,"Error from ErroResponse", Toast.LENGTH_LONG).show();
                             error.printStackTrace();
                         }
                     }){
+                        class Request {
+                        }
                         //We need to pass username and password, thus override getparams
 
                         @Override
@@ -126,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     };
                     //Add string request to request queue
-                    MySingleton.getInstance(MainActivity.this).addToRequestque(stringRequest);
+                    MySingleton.getInstance(MainActivity.this).addToRequestque(StringRequest);
 
                 }
             }

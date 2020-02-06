@@ -1,18 +1,22 @@
 package com.example.librarymanagementsystem;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
@@ -108,7 +112,7 @@ public class LoginSuccess extends AppCompatActivity implements View.OnClickListe
     }
 
     private void return_book() {
-       // Toast.makeText(this, "from Return area", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "from Return area", Toast.LENGTH_SHORT).show();
         final String bookid = txtbkid.getText().toString();
         final String studid = txtstdid.getText().toString();
         builder = new AlertDialog.Builder(LoginSuccess.this);
@@ -149,7 +153,7 @@ public class LoginSuccess extends AppCompatActivity implements View.OnClickListe
 
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
+                    Map<String,String> params = new HashMap<String, String>();
                     //The keys must match the keys on $_POST on SSS.
 
                     params.put("sid",studid);

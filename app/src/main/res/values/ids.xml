@@ -5,4 +5,10 @@
     <item name="button11" type="id" />
     <item name="login_name" type="id" />
     <item name="login_password" type="id" />
+    <item name="wlcmsg" type="id" />
+    <item name="txt_issue_std_id" type="id" />
+    <item name="txt_issue_bkid1" type="id" />
+    <item name="btn_issue_std_id" type="id" />
+    <item name="btn_issue_bkid1" type="id" />
+    <item name="btn_issue_bkid2" type="id" />
 </resources>
